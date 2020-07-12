@@ -450,13 +450,15 @@ p {
     background-color: #240229;
 }
 .spinnerContainer {
+    margin: 30px;
     height: 200px;
     width: 200px;
     overflow: hidden;
+    position: relative;
 }
 /* ========== setup ========== */
+/* ~~~~~~~ beveledCircleGradient ~~~~~~ */
 #beveledCircleGradient {
-    position: relative;
     z-index: 1;
     border: 4px solid #240229;
     border-radius: 50%;
@@ -492,14 +494,7 @@ p {
         rgba(255, 0, 255, 1) 50%,
         rgba(255, 0, 160, 1) 100%
     );
-    /* background-image: linear-gradient(
-        -225deg,
-        #ff057c 0%,
-        #8d0b93 50%,
-        #321575 100%
-    ); */
     filter: blur(5px);
-    /* z-index: -1; */
     animation: animate 0.5s linear infinite;
     /* ***************** need to get this drop shadow on to the absolute element ******************* */
 }
@@ -511,4 +506,69 @@ p {
         transform: rotate(360deg);
     }
 }
+/* ~~~~~~~ beveledCircleGradient ~~~~~~ */
+/* ~~~~~~~ threeRotatingBars ~~~~~~ */
+#threeRotatingBars {
+    /* background-color: yellow; */
+}
+#threeRotatingBars span {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transform-origin: top left;
+    border-radius: 50%;
+    border-top: 10px solid rgba(195, 0, 255, 1);
+    border-right: 10px solid rgba(195, 0, 255, 1);
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    animation: spin 2.4s linear infinite;
+    box-shadow: inset 1px solid white;
+
+}
+#threeRotatingBars span:before {
+    content: "";
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transform-origin: top left;
+    border-radius: 50%;
+    border-top: 10px solid rgba(255, 0, 255, 1);
+    border-right: 10px solid rgba(255, 0, 255, 1);
+    border-bottom: 10px solid rgba(255, 0, 255, 1);
+    border-left: 10px solid transparent;
+    animation: spin 3.7s linear infinite;
+
+}
+#threeRotatingBars span:after {
+    content: "";
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transform-origin: top left;
+    border-radius: 50%;
+    border-top: 10px solid rgba(255, 0, 160, 1);
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg) translate(-50%,-50%);
+    }
+    to {
+        transform: rotate(360deg) translate(-50%,-50%);
+    }
+}
+/* ~~~~~~~ threeRotatingBars ~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ spinners-200px ~~~~~~~~~~~~~~~~~~~~~ */
