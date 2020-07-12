@@ -571,4 +571,46 @@ p {
     }
 }
 /* ~~~~~~~ threeRotatingBars ~~~~~~ */
+/* ~~~~~~~ ringOfCircles ~~~~~~ */
+#ringOfCircles {
+    /* background-color: peachpuff; */
+    filter: blur(5px) contrast(10);
+    /* padding:20px; */
+    background-color: #333;
+}
+#ringOfCircles span {
+    margin: 10px;
+    position: absolute;
+    border: 40px dotted rgb(252, 210, 96);
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    
+    /* background-color: brown; */
+}
+#ringOfCircles span:before {
+    content: "";
+    position: absolute;
+    border-top: 80px dotted rgba(252, 127, 96, 0.8);
+    height: 100%;
+    width: 100%;
+    height: calc(100% + 80px);
+    width: calc(100% + 80px);
+    top: -40px;
+    left: -40px;
+    border-radius: 50%;
+    /* background-color: brown; */
+    animation: circlespin 5s linear infinite;
+    
+}
+@keyframes circlespin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+/* ~~~~~~~ ringOfCircles ~~~~~~ */
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ spinners-200px ~~~~~~~~~~~~~~~~~~~~~ */
