@@ -612,5 +612,82 @@ p {
     }
 }
 /* ~~~~~~~ ringOfCircles ~~~~~~ */
+/* ~~~~~~~ constantWavingBars ~~~~~~ */
+#constantWavingBars {
+    display: flex;
+    padding: 20px;
+}
+#constantWavingBars span {
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background: linear-gradient(0deg, rgba(0,25,37,1) 0%, rgba(8,107,125,1) 30%, rgba(0,255,29,1) 95%, rgba(142,255,0,1) 100%);    
+}
+#constantWavingBars .line1 {
+    animation: growLines 1s ease-in-out alternate infinite;
+} 
+#constantWavingBars .line2 {
+    animation: growLines 1s ease-in-out .4s alternate infinite;
+} 
+#constantWavingBars .line3 {
+    animation: growLines 1s ease-in-out .8s alternate infinite;
+} 
+#constantWavingBars .line4 {
+    animation: growLines 1s ease-in-out 1.2s alternate infinite;
+} 
+#constantWavingBars .line5 {
+    animation: growLines 1s ease-in-out 1.6s alternate infinite;
+} 
+@keyframes growLines {
+    from {
+        height: 15px;
+    }
+    to {
+        height: 100%;
+    }
+}
+/* ~~~~~~~ constantWavingBars ~~~~~~ */
+/* ~~~~~~~ pausingWavingBars ~~~~~~ */
+#pausingWavingBars {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+#pausingWavingBars span {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    background: linear-gradient(0deg, rgba(0,25,37,1) 0%, rgba(8,107,125,1) 30%, rgba(0,255,29,1) 95%, rgba(142,255,0,1) 100%);    
+}
+#pausingWavingBars .line1 {
+    animation: pausingGrowLines 2s ease-in-out alternate infinite;
+} 
+#pausingWavingBars .line2 {
+    animation: pausingGrowLines 2s ease-in-out .1s alternate infinite;
+} 
+#pausingWavingBars .line3 {
+    animation: pausingGrowLines 2s ease-in-out .2s alternate infinite;
+} 
+#pausingWavingBars .line4 {
+    animation: pausingGrowLines 2s ease-in-out .3s alternate infinite;
+} 
+#pausingWavingBars .line5 {
+    animation: pausingGrowLines 2s ease-in-out .4s alternate infinite;
+} 
+@keyframes pausingGrowLines {
+    0% {
+        height: 15px;
+    }
+    20% {
+        height: 100%;
+    }
+    40% {
+        height: 15px;
+    }
+}
+/* ~~~~~~~ pausingWavingBars ~~~~~~ */
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ spinners-200px ~~~~~~~~~~~~~~~~~~~~~ */
