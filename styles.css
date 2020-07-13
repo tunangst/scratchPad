@@ -517,7 +517,7 @@ p {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transform-origin: top left;
     border-radius: 50%;
     border-top: 10px solid rgba(195, 0, 255, 1);
@@ -526,16 +526,15 @@ p {
     border-left: 10px solid transparent;
     animation: spin 2.4s linear infinite;
     box-shadow: inset 1px solid white;
-
 }
 #threeRotatingBars span:before {
-    content: "";
+    content: '';
     height: 120px;
     width: 120px;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transform-origin: top left;
     border-radius: 50%;
     border-top: 10px solid rgba(255, 0, 255, 1);
@@ -543,16 +542,15 @@ p {
     border-bottom: 10px solid rgba(255, 0, 255, 1);
     border-left: 10px solid transparent;
     animation: spin 3.7s linear infinite;
-
 }
 #threeRotatingBars span:after {
-    content: "";
+    content: '';
     height: 80px;
     width: 80px;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transform-origin: top left;
     border-radius: 50%;
     border-top: 10px solid rgba(255, 0, 160, 1);
@@ -564,10 +562,10 @@ p {
 
 @keyframes spin {
     from {
-        transform: rotate(0deg) translate(-50%,-50%);
+        transform: rotate(0deg) translate(-50%, -50%);
     }
     to {
-        transform: rotate(360deg) translate(-50%,-50%);
+        transform: rotate(360deg) translate(-50%, -50%);
     }
 }
 /* ~~~~~~~ threeRotatingBars ~~~~~~ */
@@ -725,3 +723,17 @@ p {
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ spinners-200px ~~~~~~~~~~~~~~~~~~~~~ */
+
+#class {
+}
+#class .hexagonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#class .hexagonContainer .hexagon {
+    position: relative;
+    width: 60px;
+    height: 100px;
+    background: #000;
+}
