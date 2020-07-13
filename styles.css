@@ -688,6 +688,40 @@ p {
     }
 }
 /* ~~~~~~~ pausingWavingBars ~~~~~~ */
+/* ~~~~~~~ test ~~~~~~ */
+#test {
+    background-color:black;
+    display: flex;
+    justify-content: space-around;
+    filter:contrast(5);
+
+}
+#test .cloud {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    height: 100px;
+    width: 200px;
+    filter: blur(10px);
+}
+#test .rain {
+    height: 100px;
+    width: 40px;
+    background-color: white;
+    border-radius: 100%;
+    animation: 1s drop ease-in infinite;
+    filter: blur(10px);
+}
+@keyframes drop {
+    from{
+        transform: translateY(5px);
+    }
+    to {
+        transform: translateY(140px);
+    }
+}
+/* ~~~~~~~ test ~~~~~~ */
+
 
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ spinners-200px ~~~~~~~~~~~~~~~~~~~~~ */
