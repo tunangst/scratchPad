@@ -10,9 +10,24 @@ body,
 section {
     padding: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+}
+.header {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header p {
+    margin: 0;
+    padding: 0;
+    color: #aaa;
+    font-size: 40px;
+    filter: drop-shadow(-2px -2px 1px rgba(255, 255, 255, 0.2))
+        drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.5));
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ buttons ~~~~~~~~~~~~~~~~~~~~~ */
 /* ========== setup ========== */
@@ -467,6 +482,7 @@ p {
         inset -5px -5px 5px rgba(255, 255, 255, 0.2),
         inset 10px 10px 10px rgba(0, 0, 0, 0.4);
 }
+
 #beveledCircleGradient:before {
     content: '';
     z-index: 5;
@@ -508,9 +524,7 @@ p {
 }
 /* ~~~~~~~ beveledCircleGradient ~~~~~~ */
 /* ~~~~~~~ threeRotatingBars ~~~~~~ */
-#threeRotatingBars {
-    /* background-color: yellow; */
-}
+
 #threeRotatingBars span {
     height: 100px;
     width: 100px;
@@ -524,8 +538,8 @@ p {
     border-right: 10px solid rgba(195, 0, 255, 1);
     border-bottom: 10px solid transparent;
     border-left: 10px solid transparent;
-    animation: spin 2.4s linear infinite;
     box-shadow: inset 1px solid white;
+    animation: spin 2.4s linear infinite;
 }
 #threeRotatingBars span:before {
     content: '';
@@ -571,9 +585,7 @@ p {
 /* ~~~~~~~ threeRotatingBars ~~~~~~ */
 /* ~~~~~~~ ringOfCircles ~~~~~~ */
 #ringOfCircles {
-    /* background-color: peachpuff; */
     filter: blur(5px) contrast(10);
-    /* padding:20px; */
     background-color: #333;
 }
 #ringOfCircles span {
@@ -583,11 +595,9 @@ p {
     height: 90%;
     width: 90%;
     border-radius: 50%;
-    
-    /* background-color: brown; */
 }
 #ringOfCircles span:before {
-    content: "";
+    content: '';
     position: absolute;
     border-top: 80px dotted rgba(252, 127, 96, 0.8);
     height: 100%;
@@ -597,16 +607,14 @@ p {
     top: -40px;
     left: -40px;
     border-radius: 50%;
-    /* background-color: brown; */
     animation: circlespin 5s linear infinite;
-    
 }
 @keyframes circlespin {
     from {
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg)
+        transform: rotate(360deg);
     }
 }
 /* ~~~~~~~ ringOfCircles ~~~~~~ */
@@ -620,23 +628,29 @@ p {
     width: 15px;
     height: 15px;
     border-radius: 20px;
-    background: linear-gradient(0deg, rgba(0,25,37,1) 0%, rgba(8,107,125,1) 30%, rgba(0,255,29,1) 95%, rgba(142,255,0,1) 100%);    
+    background: linear-gradient(
+        0deg,
+        rgba(0, 25, 37, 1) 0%,
+        rgba(8, 107, 125, 1) 30%,
+        rgba(0, 255, 29, 1) 95%,
+        rgba(142, 255, 0, 1) 100%
+    );
 }
 #constantWavingBars .line1 {
     animation: growLines 1s ease-in-out alternate infinite;
-} 
+}
 #constantWavingBars .line2 {
-    animation: growLines 1s ease-in-out .4s alternate infinite;
-} 
+    animation: growLines 1s ease-in-out 0.4s alternate infinite;
+}
 #constantWavingBars .line3 {
-    animation: growLines 1s ease-in-out .8s alternate infinite;
-} 
+    animation: growLines 1s ease-in-out 0.8s alternate infinite;
+}
 #constantWavingBars .line4 {
     animation: growLines 1s ease-in-out 1.2s alternate infinite;
-} 
+}
 #constantWavingBars .line5 {
     animation: growLines 1s ease-in-out 1.6s alternate infinite;
-} 
+}
 @keyframes growLines {
     from {
         height: 15px;
@@ -657,23 +671,29 @@ p {
     width: 15px;
     height: 15px;
     border-radius: 20px;
-    background: linear-gradient(0deg, rgba(0,25,37,1) 0%, rgba(8,107,125,1) 30%, rgba(0,255,29,1) 95%, rgba(142,255,0,1) 100%);    
+    background: linear-gradient(
+        0deg,
+        rgba(0, 25, 37, 1) 0%,
+        rgba(8, 107, 125, 1) 30%,
+        rgba(0, 255, 29, 1) 95%,
+        rgba(142, 255, 0, 1) 100%
+    );
 }
 #pausingWavingBars .line1 {
     animation: pausingGrowLines 2s ease-in-out alternate infinite;
-} 
+}
 #pausingWavingBars .line2 {
-    animation: pausingGrowLines 2s ease-in-out .1s alternate infinite;
-} 
+    animation: pausingGrowLines 2s ease-in-out 0.1s alternate infinite;
+}
 #pausingWavingBars .line3 {
-    animation: pausingGrowLines 2s ease-in-out .2s alternate infinite;
-} 
+    animation: pausingGrowLines 2s ease-in-out 0.2s alternate infinite;
+}
 #pausingWavingBars .line4 {
-    animation: pausingGrowLines 2s ease-in-out .3s alternate infinite;
-} 
+    animation: pausingGrowLines 2s ease-in-out 0.3s alternate infinite;
+}
 #pausingWavingBars .line5 {
-    animation: pausingGrowLines 2s ease-in-out .4s alternate infinite;
-} 
+    animation: pausingGrowLines 2s ease-in-out 0.4s alternate infinite;
+}
 @keyframes pausingGrowLines {
     0% {
         height: 15px;
@@ -688,11 +708,10 @@ p {
 /* ~~~~~~~ pausingWavingBars ~~~~~~ */
 /* ~~~~~~~ test ~~~~~~ */
 #test {
-    background-color:black;
+    background-color: black;
     display: flex;
     justify-content: space-around;
-    filter:contrast(5);
-
+    filter: contrast(5);
 }
 #test .cloud {
     position: absolute;
@@ -711,7 +730,7 @@ p {
     filter: blur(10px);
 }
 @keyframes drop {
-    from{
+    from {
         transform: translateY(5px);
     }
     to {
@@ -720,16 +739,12 @@ p {
 }
 /* ~~~~~~~ test ~~~~~~ */
 
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ spinners-200px ~~~~~~~~~~~~~~~~~~~~~ */
 
 #class {
+    background-color: rgb(20, 136, 64);
 }
 #class .hexagonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 #class .hexagonContainer .hexagon {
     position: relative;
@@ -737,3 +752,157 @@ p {
     height: 100px;
     background: #000;
 }
+#class .hexagonContainer .hexagon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 0px;
+    height: 0px;
+    border-right: 30px solid #000;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+#class .hexagonContainer .hexagon:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 0px;
+    height: 0px;
+    border-left: 30px solid #000;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+/* ~@~#~#!%@!@%!@%!%@!%%!@ */
+#class .hexagonContainer2 {
+}
+#class .hexagonContainer2 .hexagon2 {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    background: #0f0;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: 5s hueSpin linear infinite;
+}
+@keyframes hueSpin {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* 2359823529385235892358 */
+#class .hexagonContainer3 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+    /* margin-left: -50px; */
+}
+#class .hexagonContainer3 .row:nth-child(even) {
+    margin-left: 100px;
+    margin-top: -26px;
+}
+#class .hexagonContainer3 .row {
+    display: flex;
+    margin-top: -26px;
+}
+#class .hexagonContainer3 .row .hexagon3 {
+    position: relative;
+    width: 100px;
+    height: 110px;
+    margin-left: 1px;
+    /* border: 1px solid white; */
+    background: #333;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: 5s hueSpin linear infinite;
+}
+#class .hexagonContainer3 .row .hexagon3:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(60deg);
+    transform-origin: right;
+}
+#class .hexagonContainer3 .row .hexagon3:hover {
+    transition: 0s;
+    background-color: rgba(255, 0, 160, 0.7);
+}
+
+/* \/\/\/\/\/\/\/\/\/\/\/pause controls\/\/\/\/\/\/\/\/\/\/\/\/ */
+#threeRotatingBars:hover > span,
+#threeRotatingBars:hover > span:before,
+#threeRotatingBars:hover > span:after {
+    animation-play-state: running;
+}
+#threeRotatingBars span,
+#threeRotatingBars span:before,
+#threeRotatingBars span:after {
+    animation-play-state: paused;
+}
+/*  */
+/*  */
+#beveledCircleGradient:hover > span {
+    animation-play-state: running;
+}
+#beveledCircleGradient span {
+    animation-play-state: paused;
+}
+/*  */
+/*  */
+#ringOfCircles:hover span:before {
+    animation-play-state: running;
+}
+#ringOfCircles span:before {
+    animation-play-state: paused;
+}
+/*  */
+/*  */
+#constantWavingBars:hover .line1,
+#constantWavingBars:hover .line2,
+#constantWavingBars:hover .line3,
+#constantWavingBars:hover .line4,
+#constantWavingBars:hover .line5 {
+    animation-play-state: running;
+}
+#constantWavingBars .line1,
+#constantWavingBars .line2,
+#constantWavingBars .line3,
+#constantWavingBars .line4,
+#constantWavingBars .line5 {
+    animation-play-state: paused;
+}
+/*  */
+/*  */
+#pausingWavingBars:hover .line1,
+#pausingWavingBars:hover .line2,
+#pausingWavingBars:hover .line3,
+#pausingWavingBars:hover .line4,
+#pausingWavingBars:hover .line5 {
+    animation-play-state: running;
+}
+#pausingWavingBars .line1,
+#pausingWavingBars .line2,
+#pausingWavingBars .line3,
+#pausingWavingBars .line4,
+#pausingWavingBars .line5 {
+    animation-play-state: paused;
+}
+/*  */
+/*  */
+#test:hover .rain {
+    animation-play-state: running;
+}
+#test .rain {
+    animation-play-state: paused;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^pause controls^^^^^^^^^^^^^^^^^^^^^^^^ */
