@@ -323,6 +323,41 @@ section {
 }
 /* ~~~~~~~ shineOver ~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ buttons ~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ inputs ~~~~~~~~~~~~~~~~~~~~~ */
+#inputs {
+    background-color: #191919;
+}
+#inputs #switches label {
+    position: relative;
+    width: 240px;
+    height: 80px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+#inputs #switches label input {
+    opacity: 0;
+}
+#inputs #switches label .check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background: #101010;
+    border-radius: 40px;
+    box-shadow: 0 0 0 4px #101010;
+}
+#inputs #switches label .check:before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 4px);
+    left: -30px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #f00;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ inputs ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ images ~~~~~~~~~~~~~~~~~~~~~ */
 /* ========== setup ========== */
 figure {
