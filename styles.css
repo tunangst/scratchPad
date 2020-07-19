@@ -1,5 +1,9 @@
 html,
 body,
+h1,
+h2,
+h3,
+h4,
 *,
 *::before,
 *::after {
@@ -459,6 +463,132 @@ p {
 }
 /* ~~~~~~~ slideUpParalax ~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ images ~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ shadows ~~~~~~~~~~~~~~~~~~~~~ */
+/* ========== setup ========== */
+#shadows {
+    z-index: -50;
+    position: relative;
+    background-color: rgb(206, 119, 56);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+#shadows div {
+    height: 200px;
+    width: 300px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* z-index: 2; */
+}
+#shadows div p {
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: #999;
+}
+/* ========== setup ========== */
+/* ~~~~~~~ shadow1 ~~~~~~ */
+#shadows #shadow1 {
+    box-shadow: 20px 30px 15px rgba(0, 0, 0, 0.3);
+}
+/* ~~~~~~~ shadow1 ~~~~~~ */
+/* ~~~~~~~ shadow2 ~~~~~~ */
+#shadows #shadow2:after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 90%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform-origin: left;
+    transform: skewY(5deg);
+    z-index: -1;
+    filter: blur(5px);
+}
+/* ~~~~~~~ shadow2 ~~~~~~ */
+/* ~~~~~~~ shadow3 ~~~~~~ */
+#shadows #shadow3:before {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+
+    width: 90%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform-origin: right;
+    transform: skewY(-7deg);
+    z-index: -1;
+    filter: blur(4px);
+}
+#shadows #shadow3:after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+
+    width: 90%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform-origin: left;
+    transform: skewY(7deg);
+    z-index: -1;
+    filter: blur(4px);
+}
+/* ~~~~~~~ shadow3 ~~~~~~ */
+/* ~~~~~~~ shadow4 ~~~~~~ */
+#shadows #shadow4:after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 5%;
+    width: 90%;
+    height: 25px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(5px);
+}
+/* ~~~~~~~ shadow4 ~~~~~~ */
+/* ~~~~~~~ shadow5 ~~~~~~ */
+#shadows #shadow5:after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: -1;
+    filter: blur(5px);
+}
+/* ~~~~~~~ shadow5 ~~~~~~ */
+/* ~~~~~~~ shadow6 ~~~~~~ */
+#shadows #shadow6 {
+    background-color: rgb(206, 119, 56);
+    border-radius: 10px;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.2),
+        10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+#shadows #shadow6 p {
+    color: #ccc;
+}
+/* ~~~~~~~ shadow6 ~~~~~~ */
+/* ~~~~~~~ shadow7 ~~~~~~ */
+#shadows #shadow7 {
+    background-color: rgb(207, 119, 57);
+    border-radius: 10px;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.2),
+        10px 10px 15px rgba(0, 0, 0, 0.1),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+#shadows #shadow7 p {
+    color: #ccc;
+}
+/* ~~~~~~~ shadow7 ~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ shadows ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ spinners-200px ~~~~~~~~~~~~~~~~~~~~~ */
 /* ========== setup ========== */
 #spinners {
@@ -871,10 +1001,37 @@ p {
 /* ~~~~~~~ puddleWaves ~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ spinners-200px ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ texture ~~~~~~~~~~~~~~~~~~~~~ */
-/* ~~~~~~~ created hexagon ~~~~~~ */
 #class {
     background-color: #000;
 }
+/* ~~~~~~~ created cube ~~~~~~ */
+#class .cubeContainer .cube {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+#class .cubeContainer .cube span {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#class .cubeContainer .cube span:nth-child(1) {
+    background-color: #555;
+    clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0% 25%);
+}
+#class .cubeContainer .cube span:nth-child(2) {
+    background-color: #222;
+    clip-path: polygon(0% 75%, 50% 100%, 50% 50%, 0% 25%);
+}
+#class .cubeContainer .cube span:nth-child(3) {
+    background-color: #111;
+    clip-path: polygon(100% 75%, 50% 100%, 50% 50%, 100% 25%);
+}
+/* ~~~~~~~ created cube ~~~~~~ */
+/* ~~~~~~~ created hexagon ~~~~~~ */
 #class .hexagonContainer {
 }
 #class .hexagonContainer .hexagon {
@@ -926,6 +1083,48 @@ p {
     }
 }
 /* ~~~~~~~ created hexagon ~~~~~~ */
+/* ~~~~~~~ created cube pattern ~~~~~~ */
+#class .cubeContainer2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+}
+#class .cubeContainer2 .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -45px;
+}
+#class .cubeContainer2 .row:nth-child(even) {
+    margin-left: 75px;
+}
+#class .cubeContainer2 .row .cube {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+#class .cubeContainer2 .row .cube span {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#class .cubeContainer2 .row .cube span:nth-child(1) {
+    background-color: #555;
+    clip-path: polygon(50% 0%, 100% 25%, 50% 50%, 0% 25%);
+}
+#class .cubeContainer2 .row .cube span:nth-child(2) {
+    background-color: #222;
+    clip-path: polygon(0% 75%, 50% 100%, 50% 50%, 0% 25%);
+}
+#class .cubeContainer2 .row .cube span:nth-child(3) {
+    background-color: #111;
+    clip-path: polygon(100% 75%, 50% 100%, 50% 50%, 100% 25%);
+}
+/* ~~~~~~~ created cube pattern ~~~~~~ */
 /* ~~~~~~~ hexagon hover inner ~~~~~~ */
 #class .hexagonContainer3 {
     width: 100%;
@@ -1151,6 +1350,411 @@ p {
     }
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ textEffects ~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ pageEffects ~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~ rainCabin ~~~~~~ */
+#pageEffects > div {
+    width: 1000px;
+    height: 700px;
+    margin-bottom: 40px;
+}
+#pageEffects .rainCabin {
+    background-image: url('./house.jpg');
+    background-size: cover;
+    background-position: center;
+    animation: 2s hueRotate infinite alternate;
+}
+#pageEffects .rainCabin:before {
+    content: '';
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(rain.png);
+    animation: 0.2s rain infinite;
+}
+@keyframes hueRotate {
+    0% {
+        filter: hue-rotate(0);
+    }
+    100% {
+        filter: hue-rotate(30deg);
+    }
+}
+@keyframes rain {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 20% 100%;
+    }
+}
+/* ~~~~~~~ rainCabin ~~~~~~ */
+/* ~~~~~~~ split ~~~~~~ */
+#pageEffects .split {
+    position: relative;
+    background-image: url(image.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#pageEffects .split:hover #side1 {
+    animation: 0.5s splitLeft ease-in-out both;
+}
+#pageEffects .split:hover #side2 {
+    animation: 0.5s splitRight ease-in-out both;
+}
+#pageEffects .split div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(house.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/* #pageEffects .split #blank {
+    background: transparent;
+} */
+#pageEffects .split #side1 {
+    animation: 0.5s splitLeftReverse ease-in-out;
+    clip-path: polygon(
+        47% 16%,
+        69% 12%,
+        45% 0%,
+        0% 0%,
+        0% 100%,
+        72% 100%,
+        46% 89%,
+        58% 79%,
+        39% 74%,
+        41% 60%,
+        61% 54%,
+        68% 43%,
+        42% 33%,
+        55% 24%
+    );
+    /* box-shadow: 5px 5px 5px black; */
+}
+#pageEffects .split #side2 {
+    animation: 0.5s splitRightReverse ease-in-out;
+    clip-path: polygon(
+        47% 16%,
+        69% 12%,
+        45% 0%,
+        100% 0%,
+        100% 100%,
+        72% 100%,
+        46% 89%,
+        58% 79%,
+        39% 74%,
+        41% 60%,
+        61% 54%,
+        68% 43%,
+        42% 33%,
+        55% 24%
+    );
+}
+@keyframes splitLeft {
+    0% {
+        transform: translate3d(0, 0, 0);
+        /* opacity: 1; */
+    }
+    80% {
+        transform: translate3d(-30%, 0, 0);
+        /* opacity: 1; */
+    }
+    100% {
+        transform: translate3d(-35%, 0, 0);
+        /* opacity: 0; */
+    }
+}
+@keyframes splitLeftReverse {
+    0% {
+        transform: translate3d(-35%, 0, 0);
+        /* opacity: 0; */
+    }
+    20% {
+        transform: translate3d(-30%, 0, 0);
+        /* opacity: 1; */
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        /* opacity: 1; */
+    }
+}
+@keyframes splitRight {
+    0% {
+        transform: translate3d(0, 0, 0);
+        /* opacity: 1; */
+    }
+    80% {
+        transform: translate3d(30%, 0, 0);
+        /* opacity: 1; */
+    }
+    100% {
+        transform: translate3d(35%, 0, 0);
+        /* opacity: 0; */
+    }
+}
+@keyframes splitRightReverse {
+    0% {
+        transform: translate3d(35%, 0, 0);
+        /* opacity: 0; */
+    }
+    20% {
+        transform: translate3d(30%, 0, 0);
+        /* opacity: 1; */
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        /* opacity: 1; */
+    }
+}
+/* ~~~~~~~ split ~~~~~~ */
+/* ~~~~~~~ analog clock ~~~~~~ */
+#pageEffects .clockBackground {
+    background-color: #091921;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pageEffects .clockBackground .clock {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(clock.png) no-repeat;
+    background-size: contain;
+    border: 5px solid #091921;
+    border-radius: 50%;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.1),
+        10px 10px 15px rgba(0, 0, 0, 0.5),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+        inset 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+#pageEffects .clockBackground .clock:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #eee;
+    border-radius: 50%;
+    z-index: 15;
+}
+#pageEffects .clockBackground .clock .hour,
+#pageEffects .clockBackground .clock .minute,
+#pageEffects .clockBackground .clock .second {
+    /* border: 1px solid magenta; */
+
+    bottom: 50%;
+    border-radius: 30px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: bottom;
+}
+#pageEffects .clockBackground .clock .hour {
+    height: 30%;
+    width: 10px;
+    background-color: #ff105e;
+}
+#pageEffects .clockBackground .clock .minute {
+    height: 40%;
+    width: 4px;
+    background-color: #eee;
+}
+#pageEffects .clockBackground .clock .second {
+    height: 40%;
+    width: 2px;
+    background-color: rgb(0, 204, 255);
+}
+#pageEffects .clockBackground .clock .second:after {
+    content: '';
+    background-color: rgb(0, 204, 255);
+    width: 100%;
+    height: 50%;
+    margin-bottom: -30px;
+    align-self: flex-end;
+}
+/* ~~~~~~~ analog clock ~~~~~~ */
+/* ~~~~~~~ cards ~~~~~~ */
+.cardsContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cardsContainer .card {
+    font-family: sans-serif;
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background-color: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.cardsContainer .card .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #9bdc28;
+    /* filter: grayscale(100%); */
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.cardsContainer .card:hover .circle {
+    clip-path: circle(300px at 80% -20%);
+}
+.cardsContainer .card:after {
+    content: 'Nike';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+.cardsContainer .card .imgbox {
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    z-index: 15;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.cardsContainer .card:hover .imgbox {
+    top: 0%;
+    transform: translate3d(0, 0, 0);
+}
+.cardsContainer .card .imgbox img {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate3d(-50%, -50%, 0) rotate(-25deg);
+    object-fit: contain;
+    filter: grayscale(100%);
+}
+.cardsContainer .card .content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    transition: 1s;
+    z-index: 8;
+    display: flex;
+    flex-direction: column;
+}
+.cardsContainer .card:hover .content {
+    height: 220px;
+}
+.cardsContainer .card:hover .content .size,
+.cardsContainer .card:hover .content .color {
+    opacity: 1;
+}
+.cardsContainer .card .content h2 {
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 10px;
+    /* letter-spacing: 1px; */
+    color: #eee;
+}
+.cardsContainer .card .content .size,
+.cardsContainer .card .content .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 8px 20px; */
+    transition: 0.5s;
+    opacity: 0;
+}
+.cardsContainer .card .content .size h3,
+.cardsContainer .card .content .color h3 {
+    color: #eee;
+    /* font-weight: 300; */
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.cardsContainer .card .content .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    /* line-height: 26px; */
+    font-size: 14px;
+    /* display: inline-block; */
+    color: #111;
+    background-color: #eee;
+    margin: 0 5px;
+    transition: 0.5s;
+    border-radius: 3px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardsContainer .card .content .size span:hover {
+    background: #9bdc28;
+}
+.cardsContainer .card .content .color h3 {
+}
+.cardsContainer .card .content .color span {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.cardsContainer .card .content .color span:nth-child(2) {
+    background-color: #ff0;
+}
+.cardsContainer .card .content .color span:nth-child(3) {
+    background-color: #9bdc28;
+}
+.cardsContainer .card .content .color span:nth-child(4) {
+    background-color: #03a9f4;
+}
+.cardsContainer .card .content .color span:nth-child(5) {
+    background-color: #e91e63;
+}
+.cardsContainer .card .content a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #eee;
+    /* border-radius: 4px; */
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+    transition: 0.5s;
+}
+.cardsContainer .card:hover .content a {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+.cardsContainer .card:hover .content a {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-delay: 0.5s;
+}
+/* ~~~~~~~ cards ~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ pageEffects ~~~~~~~~~~~~~~~~~~~~~ */
 
 /* \/\/\/\/\/\/\/\/\/\/\/pause controls\/\/\/\/\/\/\/\/\/\/\/\/ */
 #threeRotatingBars:hover > span,
