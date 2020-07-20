@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script');
 html,
 body,
 h1,
@@ -35,7 +36,7 @@ section {
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ buttons ~~~~~~~~~~~~~~~~~~~~~ */
 /* ========== setup ========== */
-.btn {
+#links .btn {
     display: flex;
     align-items: center;
 
@@ -54,7 +55,7 @@ section {
 }
 /* ========== setup ========== */
 /* ~~~~~~~ rotateIn ~~~~~~ */
-#rotateIn:after {
+#links #rotateIn:after {
     content: '';
     position: absolute;
     left: 0;
@@ -67,18 +68,18 @@ section {
     transform: rotate(-90deg);
     transition: transform 0.25s;
 }
-#rotateIn:hover:after {
+#links #rotateIn:hover:after {
     transform: rotate(0deg);
 }
 /* ~~~~~~~ rotateIn ~~~~~~ */
 /* ~~~~~~~ swipeIn ~~~~~~ */
-#swipeIn {
+#links #swipeIn {
     transition: all 0.5s;
 }
-#swipeIn:hover {
+#links #swipeIn:hover {
     color: #fff;
 }
-#swipeIn:before {
+#links #swipeIn:before {
     content: '';
     position: absolute;
     left: 0;
@@ -91,18 +92,18 @@ section {
     transform: translateX(-100%);
     transition: all 0.5s;
 }
-#swipeIn:hover:before {
+#links #swipeIn:hover:before {
     transform: translateX(0);
 }
 /* ~~~~~~~ swipeIn ~~~~~~ */
 /* ~~~~~~~ crossOut ~~~~~~ */
-#crossOut {
+#links #crossOut {
     transition: all 0.5s;
 }
-#crossOut:hover {
+#links #crossOut:hover {
     color: #fff;
 }
-#crossOut:before {
+#links #crossOut:before {
     content: '';
     position: absolute;
     left: 0;
@@ -114,10 +115,10 @@ section {
     transform: rotateX(90deg);
     transition: all 0.5s;
 }
-#crossOut:hover:before {
+#links #crossOut:hover:before {
     transform: rotateX(0);
 }
-#crossOut:after {
+#links #crossOut:after {
     content: '';
     position: absolute;
     left: 0;
@@ -129,12 +130,12 @@ section {
     transform: rotateY(90deg);
     transition: all 0.5s;
 }
-#crossOut:hover:after {
+#links #crossOut:hover:after {
     transform: rotateY(0);
 }
 /* ~~~~~~~ crossOut ~~~~~~ */
 /* ~~~~~~~ stretchOut ~~~~~~ */
-#stretchOut {
+#links #stretchOut {
     /* color: #e1332d; */
     /* border: 3px solid #e1332d; */
     background-color: #e1332d;
@@ -148,7 +149,7 @@ section {
 
     transition: all 0.5s ease-out;
 }
-#stretchOut:hover {
+#links #stretchOut:hover {
     font-weight: 900;
     letter-spacing: 10px;
     /* border: 6px solid #e1332d; */
@@ -158,7 +159,7 @@ section {
 }
 /* ~~~~~~~ stretchOut ~~~~~~ */
 /* ~~~~~~~ shadeIn ~~~~~~ */
-#shadeIn:before {
+#links #shadeIn:before {
     content: 'surprise!';
     display: flex;
     align-items: center;
@@ -173,21 +174,21 @@ section {
     transform: translateY(-100%);
     transition: all 0.25s ease-out;
 }
-#shadeIn:hover:before {
+#links #shadeIn:hover:before {
     transform: translateY(0);
 }
 /* ~~~~~~~ shadeIn ~~~~~~ */
 /* ~~~~~~~ shineIn ~~~~~~ */
-#shineIn {
+#links #shineIn {
     background-color: #410303;
     color: #fff;
     transition: all 0.3s;
     /* overflow: visible; */
 }
-#shineIn:hover {
+#links #shineIn:hover {
     background-color: #da9393;
 }
-#shineIn:after {
+#links #shineIn:after {
     content: '';
     background-color: #fff;
     position: absolute;
@@ -199,17 +200,17 @@ section {
     transform: translate(-100%, 100%) rotate(45deg);
     transition: all 0.2s;
 }
-#shineIn:hover:after {
+#links #shineIn:hover:after {
     transform: translate(100%, 100%) rotate(45deg);
 }
 /* ~~~~~~~ shineIn ~~~~~~ */
 /* ~~~~~~~ checkOver ~~~~~~ */
-#checkOver {
+#links #checkOver {
     background-color: #262626;
     color: transparent;
     /* overflow: visible; */
 }
-#checkOver:before {
+#links #checkOver:before {
     content: 'check over';
     color: #262626;
     position: absolute;
@@ -224,10 +225,10 @@ section {
     align-items: center;
     justify-content: center;
 }
-#checkOver:hover:before {
+#links #checkOver:hover:before {
     transform: translate(100%, -100%);
 }
-#checkOver:after {
+#links #checkOver:after {
     content: 'check over';
     color: #262626;
     position: absolute;
@@ -243,12 +244,12 @@ section {
     align-items: center;
     justify-content: center;
 }
-#checkOver:hover:after {
+#links #checkOver:hover:after {
     transform: translate(0, 0);
 }
 /* ~~~~~~~ checkOver ~~~~~~ */
 /* ~~~~~~~ burstOut ~~~~~~ */
-#burstOut:before {
+#links #burstOut:before {
     content: 'burst';
     position: absolute;
     top: 0;
@@ -265,16 +266,16 @@ section {
     justify-content: center;
     align-items: center;
 }
-#burstOut:hover:before {
+#links #burstOut:hover:before {
     transform: scale(1);
     opacity: 1;
 }
 /* ~~~~~~~ burstOut ~~~~~~ */
 /* ~~~~~~~ shakeMe ~~~~~~ */
-#shakeMe {
+#links #shakeMe {
     transition: all 0.3s;
 }
-#shakeMe:hover {
+#links #shakeMe:hover {
     border: 5px solid #f44336;
     color: #f44336;
 
@@ -293,7 +294,7 @@ section {
 }
 /* ~~~~~~~ shakeMe ~~~~~~ */
 /* ~~~~~~~ shineOver ~~~~~~ */
-#shineOver:after {
+#links #shineOver:after {
     content: '';
     background-color: #ffc6c6;
     top: 0;
@@ -306,7 +307,7 @@ section {
     transition: all 0.5s;
     animation: slideover 1s linear infinite;
 }
-#shineOver:hover:after {
+#links #shineOver:hover:after {
     left: 0;
     width: 100%;
     /* transform: skew(0deg); */
@@ -324,8 +325,13 @@ section {
 /* ~~~~~~~ shineOver ~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ buttons ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ inputs ~~~~~~~~~~~~~~~~~~~~~ */
+/* ========== setup ========== */
 #inputs {
     background-color: #191919;
+}
+/* ========== setup ========== */
+#inputs #switches {
+    padding: 9 50px;
 }
 #inputs #switches label {
     position: relative;
@@ -333,8 +339,12 @@ section {
     height: 80px;
     cursor: pointer;
     margin: 20px 0;
+    display: flex;
 }
 #inputs #switches label input {
+    z-index: 5;
+    height: 100%;
+    width: 100%;
     opacity: 0;
 }
 #inputs #switches label .check {
@@ -344,23 +354,112 @@ section {
     cursor: pointer;
     width: 100%;
     height: 100%;
-    background: #101010;
+    background-color: #101010;
     border-radius: 40px;
     box-shadow: 0 0 0 4px #101010;
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
 }
 #inputs #switches label .check:before {
     content: '';
     position: absolute;
-    top: calc(50% - 4px);
     left: -30px;
-    width: 8px; height: 8px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: #f00;
+    background-color: #f00;
+    transition: 0.25s 0.25s;
+    box-shadow: 0 0 5px #f00, 0 0 10px #f00, 0 0 20px #f00, 0 0 40px #f00,
+        0 0 80px #f00, 0 0 140px #f00;
 }
+#inputs #switches label input:checked ~ .check:before {
+    background: #101010;
+    box-shadow: none;
+}
+#inputs #switches label .check:after {
+    content: '';
+    position: absolute;
+    right: -30px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #101010;
+    box-shadow: none;
+    transition: 0.25s 0.25s;
+}
+
+#inputs #switches label .switch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 80px;
+    border-radius: 40px;
+    background: #333;
+    box-shadow: inset 0 -20px 15px #292929, inset 0 20px 15px #292929;
+    transition: 0.5s;
+}
+#inputs #switches label .switch:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    width: 52px;
+    height: 80px;
+    background: linear-gradient(
+            to left,
+            rgba(255, 0, 0, 0),
+            rgba(255, 0, 0, 0.06)
+        ),
+        #252525;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.3);
+}
+#inputs #switches label .switch:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52px;
+    height: 80px;
+    background: linear-gradient(
+            rgba(0, 255, 0, 0.0125),
+            rgba(0, 255, 0, 0.0125)
+        ),
+        #252525;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.3);
+}
+#inputs #switches label input:checked ~ .check:after {
+    background-color: #0f0;
+    box-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0,
+        0 0 80px #0f0;
+}
+
+#inputs #switches label input:checked ~ .switch {
+    left: 50%;
+}
+#inputs #switches label input:checked ~ .switch:before {
+    background: #252525;
+}
+#inputs #switches label input:checked ~ .switch:after {
+    background: linear-gradient(
+            to right,
+            rgba(0, 255, 0, 0),
+            rgba(0, 255, 0, 0.06)
+        ),
+        #252525;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ inputs ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ images ~~~~~~~~~~~~~~~~~~~~~ */
 /* ========== setup ========== */
-figure {
+#images .defaultFigure {
     height: 350px;
     width: 300px;
     border: 3px solid #333;
@@ -369,13 +468,13 @@ figure {
     object-fit: contain;
     margin: 30px;
 }
-img {
+.defaultFigure img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: all 0.5s ease-in-out;
 }
-figcaption {
+.defaultFigure figcaption {
     position: absolute;
     left: 0;
     height: 100%;
@@ -391,7 +490,7 @@ figcaption {
     justify-content: center;
     align-items: center;
 }
-h3 {
+.defaultFigure figcaption h3 {
     font-weight: 400;
     font-size: 35px;
     margin: 0;
@@ -399,7 +498,7 @@ h3 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-p {
+.defaultFigure figcaption p {
     font-size: 18px;
     font-weight: 900;
     margin-bottom: 10px;
@@ -497,6 +596,97 @@ p {
     transform: translate3D(0, -10%, 0);
 }
 /* ~~~~~~~ slideUpParalax ~~~~~~ */
+/* ~~~~~~~ tintAndSlideUp ~~~~~~ */
+#images #tintAndSlideUp {
+    position: relative;
+    width: 275px;
+    height: 275px;
+    background: #ccc;
+    overflow: hidden;
+    transition: 0.5s;
+}
+#images #tintAndSlideUp:hover {
+    transform: scale(1.25);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+}
+#images #tintAndSlideUp .imgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#images #tintAndSlideUp .imgBox:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #f00, #000);
+    z-index: 1;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: 0.5s;
+}
+#images #tintAndSlideUp:hover .imgBox:before {
+    opacity: 1;
+}
+#images #tintAndSlideUp .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#images #tintAndSlideUp figcaption {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+#images #tintAndSlideUp figcaption h2 {
+    /* color: #fff; */
+    z-index: 9;
+    transform: translate3d(0, 300px, 0);
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+#images #tintAndSlideUp figcaption p {
+    /* color: #fff; */
+    z-index: 9;
+    transform: translate3d(0, 300px, 0);
+    transition: 0.5s;
+    font-size: 14px;
+}
+#images #tintAndSlideUp:hover figcaption h2 {
+    transform: translate3d(0, 0, 0);
+    transition-delay: 0.6s;
+}
+#images #tintAndSlideUp:hover figcaption p {
+    transform: translate3d(0, 0, 0);
+    transition-delay: 0.7s;
+}
+#images #tintAndSlideUp figcaption {
+}
+#images #tintAndSlideUp figcaption h2 {
+}
+#images #tintAndSlideUp figcaption p {
+}
+
+/* ~~~~~~~ tintAndSlideUp ~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ images ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ shadows ~~~~~~~~~~~~~~~~~~~~~ */
 /* ========== setup ========== */
@@ -515,6 +705,7 @@ p {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: 50px;
     /* z-index: 2; */
 }
 #shadows div p {
@@ -1034,6 +1225,70 @@ p {
     animation-delay: 0s;
 }
 /* ~~~~~~~ puddleWaves ~~~~~~ */
+/* ~~~~~~~ waterOrb ~~~~~~ */
+#spinners #waterOrb {
+    /* margin: 20px; */
+}
+#spinners #waterOrb .orb {
+    position: relative;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background: #2196f3;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 1);
+}
+#spinners #waterOrb .orb:before {
+    z-index: 2;
+    content: '';
+    position: absolute;
+    top: -150%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 40%;
+    background-color: #111111cc;
+    opacity: 0.8;
+    animation: flow1 12s linear infinite;
+    transition: 2s;
+}
+#spinners #waterOrb .orb:after {
+    z-index: 3;
+    content: '';
+    position: absolute;
+    top: -150%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 40%;
+    background-color: #111111cc;
+    opacity: 0.9;
+    animation: flow2 5s linear infinite;
+
+    transition: 2s;
+}
+#spinners #waterOrb .orb:hover:before,
+#spinners #waterOrb .orb:hover:after {
+    top: -180%;
+}
+@keyframes flow1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes flow2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+/* ~~~~~~~ waterOrb ~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ spinners-200px ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ texture ~~~~~~~~~~~~~~~~~~~~~ */
 #class {
@@ -1387,7 +1642,7 @@ p {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ textEffects ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ pageEffects ~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~ rainCabin ~~~~~~ */
-#pageEffects > div {
+#pageEffects .default {
     width: 1000px;
     height: 700px;
     margin-bottom: 40px;
@@ -1789,7 +2044,241 @@ p {
     transition-delay: 0.5s;
 }
 /* ~~~~~~~ cards ~~~~~~ */
+/* ~~~~~~~ cardGlow ~~~~~~ */
+.cardsContainer .cardGlow {
+    z-index: -5;
+    background-color: #000;
+    padding: 30px;
+}
+.cardsContainer .cardGlow .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    margin: 40px;
+    justify-content: center;
+    align-items: center;
+    background: #060c21;
+}
+.cardsContainer .cardGlow .box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+.cardsContainer .cardGlow .box:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(40px);
+}
+.cardsContainer .cardGlow .box:before,
+.cardsContainer .cardGlow .box:after {
+    background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+.cardsContainer .cardGlow .box .glass {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: block;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+.cardsContainer .cardGlow .box .content {
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+.cardsContainer .cardGlow .box .content h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.cardsContainer .cardGlow .box .content p {
+    font-weight: 200;
+    color: #ccc;
+}
+/* ~~~~~~~ cardGlow ~~~~~~ */
+/* ~~~~~~~ cardGlow ~~~~~~ */
+.cardsContainer .cardFlip {
+    position: relative;
+    margin: 30px;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+}
+.cardsContainer .cardFlip .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: perspective(500px) rotateY(0deg);
+}
+.cardsContainer .cardFlip .face h2 {
+    font-size: 4em;
+    transform: perspective(500px) translateZ(50px);
+    text-transform: uppercase;
+}
+.cardsContainer .cardFlip .front {
+    background: rgb(255, 123, 0);
+}
+.cardsContainer .cardFlip .back {
+    background: #3bc2ff;
+    color: #fff;
+    transform: perspective(500px) rotateY(180deg);
+}
+.cardsContainer .cardFlip:hover .front {
+    transform: perspective(500px) rotateY(180deg);
+}
+.cardsContainer .cardFlip:hover .back {
+    transform: perspective(500px) rotateY(360deg);
+}
+/* ~~~~~~~ cardGlow ~~~~~~ */
 /* ~~~~~~~~~~~~~~~~~~~~~~~~ pageEffects ~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ text ~~~~~~~~~~~~~~~~~~~~~ */
+/* ========== setup ========== */
+#text {
+    background-color: #111;
+}
+/* ========== setup ========== */
+/* ~~~~~~~ neon ~~~~~~ */
+#text #glow {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightblue;
+}
+#text #glow h1 {
+    font-family: 'Bad Script', cursive;
+    margin: 0;
+    padding: 0;
+    color: #111;
+    font-size: 11em;
+    letter-spacing: -20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9),
+        -1px -1px 1px rgba(255, 255, 255, 0.025);
+}
+#text #glow:hover {
+    border: none;
+}
+#text #glow:hover h1 span {
+    animation: 0.5s glowIn ease-in forwards;
+}
+#text #glow h1 span:nth-child(1) {
+    animation-delay: 0.5s;
+}
+#text #glow h1 span:nth-child(2) {
+    animation-delay: 2s;
+}
+#text #glow h1 span:nth-child(3) {
+    animation-delay: 0.7s;
+}
+#text #glow h1 span:nth-child(4) {
+    animation-delay: 1s;
+}
+#text #glow h1 span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+#text #glow h1 span:nth-child(6) {
+    animation-delay: 1s;
+}
+#text #glow h1 span:nth-child(7) {
+    animation-delay: 0.4s;
+}
+@keyframes glowIn {
+    0% {
+        opacity: 0;
+        color: #fff;
+    }
+    1% {
+        opacity: 1;
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+            0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff;
+    }
+    96% {
+        opacity: 1;
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+            0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff;
+    }
+    98% {
+        opacity: 0;
+        color: #fff;
+    }
+    100% {
+        opacity: 1;
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+            0 0 80px #00b3ff, 0 0 120px #00b3ff, 0 0 200px #00b3ff;
+    }
+}
+/* ~~~~~~~ neon ~~~~~~ */
+/* ~~~~~~~ threeD ~~~~~~ */
+#text #threeD {
+    font-family: 'Catamaran', sans-serif;
+}
+#text #threeD li {
+    list-style: none;
+}
+#text #threeD li a {
+    position: relative;
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    font-size: 6.5em;
+    font-weight: 900;
+    text-decoration: none;
+    line-height: 1.2em;
+}
+#text #threeD li a:before,
+#text #threeD li a:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+#text #threeD li a:hover {
+    color: #fff;
+    -webkit-text-stroke: 1px #000;
+    transition: 0.5s;
+}
+#text #threeD li a:hover:before {
+    color: hsl(283, 100%, 40%);
+    z-index: 1;
+    -webkit-text-stroke: 1px #000;
+    transform: translate(10px, -10px);
+}
+#text #threeD li a:hover:after {
+    color: hsl(283, 100%, 16%);
+    z-index: 2;
+    -webkit-text-stroke: 1px #000;
+    transform: translate(20px, -20px);
+}
+/* ~~~~~~~ threeD ~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ text ~~~~~~~~~~~~~~~~~~~~~ */
 
 /* \/\/\/\/\/\/\/\/\/\/\/pause controls\/\/\/\/\/\/\/\/\/\/\/\/ */
 #threeRotatingBars:hover > span,

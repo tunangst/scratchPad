@@ -29,54 +29,84 @@
         <section id="inputs">
             <div id="switches">
                 <label for="">
-                    <input type="checkbox" name=''>
+                    <input type="checkbox" name="" />
                     <span class="check"></span>
-                    <span class="btn"></span>
+                    <span class="switch"></span>
                 </label>
                 <label for="">
-                    <input type="checkbox" name=''>
+                    <input type="checkbox" name="" checked="checked" />
                     <span class="check"></span>
-                    <span class="btn"></span>
+                    <span class="switch"></span>
                 </label>
             </div>
-
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~ inputs ~~~~~~~~~~~~~~~~~~~~~~~ -->
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~ images ~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section id="images">
-            <figure id="fadeInRotateZoom">
-                <img src="image.jpg" alt="silly self portrait" />
-                <figcaption>
+            <figure id="fadeInRotateZoom" class="defaultFigure">
+                <img
+                    src="image.jpg"
+                    alt="silly self portrait"
+                    class="defaultImg"
+                />
+                <figcaption class="defaultFigcaption">
                     <h3>Twist & Fade</h3>
                     <p>fade-in, rotate, zoom</p>
                 </figcaption>
             </figure>
-            <figure id="slideRightRotateZoom">
-                <img src="image.jpg" alt="silly self portrait" />
-                <figcaption>
+            <figure id="slideRightRotateZoom" class="defaultFigure">
+                <img
+                    src="image.jpg"
+                    alt="silly self portrait"
+                    class="defaultImg"
+                />
+                <figcaption class="defaultFigcaption">
                     <h3>Twist & Slide</h3>
                     <p>slide-right, rotate, zoom</p>
                 </figcaption>
             </figure>
-            <figure id="slideRightOut">
-                <img src="image.jpg" alt="silly self portrait" />
-                <figcaption>
+            <figure id="slideRightOut" class="defaultFigure">
+                <img
+                    src="image.jpg"
+                    alt="silly self portrait"
+                    class="defaultImg"
+                />
+                <figcaption class="defaultFigcaption">
                     <h3>Slide Out</h3>
                     <p>slide right & out</p>
                 </figcaption>
             </figure>
-            <figure id="slideUp">
-                <img src="image.jpg" alt="silly self portrait" />
-                <figcaption>
+            <figure id="slideUp" class="defaultFigure">
+                <img
+                    src="image.jpg"
+                    alt="silly self portrait"
+                    class="defaultImg"
+                />
+                <figcaption class="defaultFigcaption">
                     <h3>Slide Up</h3>
                     <p>slide up for caption space</p>
                 </figcaption>
             </figure>
-            <figure id="slideUpParalax">
-                <img src="image.jpg" alt="silly self portrait" />
-                <figcaption>
+            <figure id="slideUpParalax" class="defaultFigure">
+                <img
+                    src="image.jpg"
+                    alt="silly self portrait"
+                    class="defaultImg"
+                />
+                <figcaption class="defaultFigcaption">
                     <h3>Slide Paralax</h3>
                     <p>slide up for caption space. Image paralaxes</p>
+                </figcaption>
+            </figure>
+            <figure id="tintAndSlideUp">
+                <div class="imgBox">
+                    <img src="image.jpg" />
+                </div>
+                <figcaption>
+                    <h2>Tint & Slide Up</h2>
+                    <p>
+                        Tint picture and caption slides up.
+                    </p>
                 </figcaption>
             </figure>
         </section>
@@ -142,6 +172,9 @@
                 <span></span>
                 <span></span>
                 <span></span>
+            </div>
+            <div id="waterOrb">
+                <span class="orb"></span>
             </div>
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~ spinners ~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -786,7 +819,7 @@
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~ text effects ~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~ pages ~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section id="pageEffects">
-            <div class="rainCabin">
+            <div class="default rainCabin">
                 <span></span>
             </div>
             <div class="split">
@@ -794,7 +827,7 @@
                 <div id="side2"></div>
                 <!-- <div id="blank"></div> -->
             </div>
-            <div class="clockBackground">
+            <div class="default clockBackground">
                 <div class="clock">
                     <div class="hour">
                         <!-- <span class="hourSpan"></span> -->
@@ -833,9 +866,51 @@
                         <a href="#">Buy Now</a>
                     </div>
                 </div>
+                <div class="cardGlow">
+                    <div class="box">
+                        <span class="glass"></span>
+                        <div class="content">
+                            <h2>Glowing Border</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut
+                                enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardFlip">
+                    <div class="face front">
+                        <h2>Front</h2>
+                    </div>
+                    <div class="face back">
+                        <h2>Back</h2>
+                    </div>
+                </div>
             </div>
             <script src="./shoe.js"></script>
         </section>
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~ pages ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~ text ~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section id="text">
+            <div id="glow">
+                <h1>
+                    <span>W</span>
+                    <span>e</span>
+                    <span>l</span>
+                    <span>c</span>
+                    <span>o</span>
+                    <span>m</span>
+                    <span>e</span>
+                </h1>
+            </div>
+            <ul id="threeD">
+                <li><a href="#" data-text="Home">Home</a></li>
+            </ul>
+        </section>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~ text ~~~~~~~~~~~~~~~~~~~~~~~~ -->
     </body>
 </html>
